@@ -21,16 +21,16 @@ t12 = [1, 2, 4, 8, 16, 32, 64]
 #sqlite = [0.1, 0.1, 0.1, 0.2, 0.8, 2.8, 3.3]
 
 # CWM (req/s)
-#filename = "cwm_req_per_sec_forward_direct"
-#title = "Cadastral Web Map"
-#forward = [4.7, 9.7, 17.6, 22.8, 23.2, 23.1, 22.8]
-#direct = [12.8, 26.2, 48.4, 49.5, 47.9, 48.9, 48.5]
+filename = "cwm_req_per_sec_forward_direct"
+title = "Cadastral Web Map"
+forward = [4.7, 9.7, 17.6, 22.8, 23.2, 23.1, 22.8]
+direct = [12.8, 26.2, 48.4, 49.5, 47.9, 48.9, 48.5]
 
 # CWM (max response time)
-filename = "cwm_max_resp_time_forward_direct"
-title = "Cadastral Web Map"
-forward = [3.8, 3.7, 3.7, 4.0, 5.1, 11.0, 38.0]
-direct = [0.5, 0.5, 0.5, 12.1, 22.2, 58.1, 64.1]
+#filename = "cwm_max_resp_time_forward_direct"
+#title = "Cadastral Web Map"
+#forward = [3.8, 3.7, 3.7, 4.0, 5.1, 11.0, 38.0]
+#direct = [0.5, 0.5, 0.5, 12.1, 22.2, 58.1, 64.1]
 
 # Orthofoto (average)
 #filename = "ortho_resampling_req_per_sec"
@@ -50,14 +50,14 @@ plt.plot(t11, forward,  marker='s', color='b', label='forward', linewidth='2')
 plt.plot(t11, direct, marker='o', color='y', label='direct', linewidth='2')
 
 plt.xlabel('N Requests')
-#plt.ylabel('Throughput (Req/s)')
-plt.ylabel('Max response time (s)')
+plt.ylabel('Throughput (Req/s)')
+#plt.ylabel('Max response time (s)')
 plt.title(title)
 plt.legend(bbox_to_anchor=(0.02, 0.98), loc=2, borderaxespad=0.)
 
 plt.xticks( [1, 2, 3, 4, 5, 6, 7],  t12 )
 #plt.ylim([0, 210])
-plt.ylim([0, 70])
+plt.ylim([0, 50])
 
 plt.grid(b=True, which='major', linestyle='dotted') 
 
